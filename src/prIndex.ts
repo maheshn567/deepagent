@@ -44,10 +44,10 @@ async function main() {
 
   const workflow = mastra.getWorkflow('prReviewWorkflow');
 
-  // Target GitHub PR
+  // Target GitHub PR on deepagent repository
   const prTarget = {
     owner: 'maheshn567',
-    repo: 'vector_valut-RAG-',
+    repo: 'deepagent',
     pullNumber: 1,
   };
 
