@@ -52,9 +52,11 @@ const server = http.createServer((req, res) => {
           const author = payload.pull_request?.user?.login || 'unknown';
           const repo = payload.repository?.name;
           const owner = payload.repository?.owner?.login;
+          const timestamp = new Date().toISOString();
 
           console.log('\n====================================================');
           console.log(`🔔 [GITHUB WEBHOOK ALERT] Pull Request Event Received!`);
+          console.log(`🕒 Timestamp : ${timestamp}`);
           console.log('====================================================');
           console.log(`📌 Repository : ${owner}/${repo}`);
           console.log(`🔀 PR #${pullNumber}   : "${prTitle}"`);
